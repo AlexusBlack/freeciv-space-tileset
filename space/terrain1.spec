@@ -1,8 +1,8 @@
 
 [spec]
 
-; Format and options of this spec file:
-options = "+Freeciv-2.6-spec"
+; Format and options of this spec file: 
+options = "+Freeciv-spec-Devel-2019-Jul-03"
 
 [info]
 
@@ -80,12 +80,15 @@ tiles = { "row", "column", "tag"
 
  8,  2, "ts.gems"
  8,  4, "ts.fruit"
+ 8,  6, "ts.rubber"
 
  9,  2, "ts.fish"
  9,  4, "ts.whales"
+ 9,  6, "ts.boar"
 
  10, 2, "ts.seals"
  10, 4, "ts.forest_game"
+ 10, 6, "ts.berries"
 
  11, 2, "ts.horses"
  11, 4, "ts.grassland_resources", "ts.river_resources"
@@ -100,6 +103,17 @@ tiles = { "row", "column", "tag"
  12, 6, "road.road_sw"
  12, 7, "road.road_w"
  12, 8, "road.road_nw"
+
+ ;bridges
+ 16, 0, "road.bridge_isolated"
+ 16, 1, "road.bridge_n"
+ 16, 2, "road.bridge_ne"
+ 16, 3, "road.bridge_e"
+ 16, 4, "road.bridge_se"
+ 16, 5, "road.bridge_s"
+ 16, 6, "road.bridge_sw"
+ 16, 7, "road.bridge_w"
+ 16, 8, "road.bridge_nw"
 
 ;rails
  13, 0, "road.rail_isolated"

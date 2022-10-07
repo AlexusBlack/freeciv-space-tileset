@@ -1,8 +1,8 @@
 
 [spec]
 
-; Format and options of this spec file:
-options = "+Freeciv-2.6-spec"
+; Format and options of this spec file: 
+options = "+Freeciv-spec-Devel-2019-Jul-03"
 
 [info]
 
@@ -37,8 +37,18 @@ tiles = { "row", "column", "tag"
   0,  9, "unit.hp_10"
   0, 10, "unit.hp_0"
 
-; Numbers: city size: (also used for goto)
+  8,  0, "unit.hp_95"
+  8,  1, "unit.hp_85"
+  8,  2, "unit.hp_75"
+  8,  3, "unit.hp_65"
+  8,  4, "unit.hp_55"
+  8,  5, "unit.hp_45"
+  8,  6, "unit.hp_35"
+  8,  7, "unit.hp_25"
+  8,  8, "unit.hp_15"
+  8,  9, "unit.hp_5"
 
+; Numbers: city size: (also used for goto)
 
   1,  0, "city.size_000"
   1,  1, "city.size_100"
@@ -108,6 +118,21 @@ tiles = { "row", "column", "tag"
   6, 8, "city.t_trade_8"
   6, 9, "city.t_trade_9"
 
+; Server sends back a single numeral/char for tile output, previously limiting us to 0-9, 
+; which fails in cases like gold+river+colossus+democracy+superhighway (6+3)*1.5 = 13
+  7, 0, "city.t_trade_A"  ; 10
+  7, 1, "city.t_trade_B"  ; 11
+  7, 2, "city.t_trade_C"  ; 12
+  7, 3, "city.t_trade_D"  ; 13
+  7, 4, "city.t_trade_E"  ; 14
+  7, 5, "city.t_trade_F"  ; 15
+  7, 6, "city.t_trade_G"  ; 16
+  7, 7, "city.t_trade_H"  ; 17
+  7, 8, "city.t_trade_I"  ; 18
+  7, 9, "city.t_trade_J"  ; 19
+  7, 10, "city.t_trade_K"  ; 20
+  7, 11, "city.t_trade_L"  ; 21+
+
 ; Unit Extras(not activities)
 
   3, 10, "unit.connect"
@@ -115,5 +140,17 @@ tiles = { "row", "column", "tag"
          "unit.auto_settler"
   5, 10, "unit.stack"
   6, 10, "unit.loaded"
-
+; Alternate display modes for stacked units 
+  3, 11, "unit.stack1"
+  4, 11, "unit.stk_shld_r"
+  5, 11, "unit.stk_shld_l"
+; Stacked unit count for display mode 2
+  9, 0,  "unit.stack2"
+  9, 1,  "unit.stack3"
+  9, 2,  "unit.stack4"
+  9, 3,  "unit.stack5"
+  9, 4,  "unit.stack6"
+  9, 5,  "unit.stack7"
+  9, 6,  "unit.stack8"
+  9, 7,  "unit.stack9"  ; NB: 9 or more
 }
